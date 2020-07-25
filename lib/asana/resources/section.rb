@@ -51,7 +51,7 @@ module Asana
         #
         # id - [Gid] The section to get.
         # options - [Hash] the request I/O options.
-        def find_by_id(client, id, options: {})
+        def find_by_id(client, gid, options: {})
 
           self.new(parse(client.get("/sections/#{gid}", options: options)).first, client: client)
         end
